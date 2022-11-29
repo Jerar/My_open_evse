@@ -232,8 +232,8 @@ extern AutoCurrentCapacityController g_ACCController;
 //select default LCD backlight mode. can be overridden w/CLI/RAPI
 #define BKL_TYPE_MONO 0
 #define BKL_TYPE_RGB  1
-#define DEFAULT_LCD_BKL_TYPE BKL_TYPE_RGB
-//#define DEFAULT_LCD_BKL_TYPE BKL_TYPE_MONO
+//#define DEFAULT_LCD_BKL_TYPE BKL_TYPE_RGB
+#define DEFAULT_LCD_BKL_TYPE BKL_TYPE_MONO
 
 // Adafruit LCD backpack in I2C mode (MCP23008)
 //#define I2CLCD
@@ -241,7 +241,7 @@ extern AutoCurrentCapacityController g_ACCController;
 // Support PCF8574* based I2C backpack using F. Malpartida's library
 // https://bitbucket.org/fmalpartida/new-liquidcrystal/downloads
 // *requires* I2CLCD enabled and RGBLCD disabled
-//#define I2CLCD_PCF8574
+#define I2CLCD_PCF8574
 #ifdef I2CLCD_PCF8574
 #define I2CLCD
 #undef RGBLCD
@@ -256,7 +256,7 @@ extern AutoCurrentCapacityController g_ACCController;
 // How to use 1-button menu
 // Long press activates menu
 // When within menus, short press cycles menu items, long press selects and exits current submenu
-#define BTN_MENU
+//#define BTN_MENU
 
 // take out basic setup stuff that the user really shouldn't be changing,
 // which can be set via RAPI/WiFi module.. reclaims a lot of code space
@@ -714,7 +714,7 @@ extern AutoCurrentCapacityController g_ACCController;
 #ifdef OPENEVSE_2
 #define DEFAULT_AMMETER_CURRENT_OFFSET 230 // OpenEVSE II with a 27 Ohm burden resistor, after a 2-point calibration at 12.5A and 50A
 #else
-#define DEFAULT_AMMETER_CURRENT_OFFSET 0   // OpenEVSE v2.5 and v3 with a 22 Ohm burden resistor.  Could use a more thorough calibration exercise to nails this down.
+#define DEFAULT_AMMETER_CURRENT_OFFSET 220   // OpenEVSE v2.5 and v3 with a 22 Ohm burden resistor.  Could use a more thorough calibration exercise to nails this down.
 #endif
 
 // The maximum number of milliseconds to sample an ammeter pin in order to find three zero-crossings.
