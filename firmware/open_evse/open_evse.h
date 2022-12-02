@@ -207,8 +207,8 @@ extern AutoCurrentCapacityController g_ACCController;
 #define MV_FOR_L1 120000L       // conventional for North America
 #endif
 #ifndef MV_FOR_L2
-#define MV_FOR_L2 240000L       // conventional for North America
-//  #define MV_FOR_L2 230000L   // conventional for most of the world
+//#define MV_FOR_L2 240000L       // conventional for North America
+  #define MV_FOR_L2 230000L   // conventional for most of the world
 #endif
 
 // kWh Recording feature depends upon #AMMETER support
