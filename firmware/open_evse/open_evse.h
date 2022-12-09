@@ -275,7 +275,7 @@ extern AutoCurrentCapacityController g_ACCController;
 
 // Option for RTC and DelayTime
 // REQUIRES HARDWARE RTC: DS1307 or DS3231 connected via I2C
-#define RTC // enable RTC & timer functions
+//#define RTC // enable RTC & timer functions
 
 #ifdef RTC
 // Option for Delay Timer - GoldServe
@@ -714,7 +714,7 @@ extern AutoCurrentCapacityController g_ACCController;
 #ifdef OPENEVSE_2
 #define DEFAULT_AMMETER_CURRENT_OFFSET 230 // OpenEVSE II with a 27 Ohm burden resistor, after a 2-point calibration at 12.5A and 50A
 #else
-#define DEFAULT_AMMETER_CURRENT_OFFSET 0   // Was 220 OpenEVSE v2.5 and v3 with a 22 Ohm burden resistor.  Could use a more thorough calibration exercise to nails this down.
+#define DEFAULT_AMMETER_CURRENT_OFFSET 0   //  OpenEVSE v2.5 and v3 with a 22 Ohm burden resistor.  Could use a more thorough calibration exercise to nails this down.
 #endif
 
 // The maximum number of milliseconds to sample an ammeter pin in order to find three zero-crossings.
